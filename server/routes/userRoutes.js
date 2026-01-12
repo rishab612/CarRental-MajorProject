@@ -1,0 +1,14 @@
+import express from "express";
+import { getCars, getUserData, loginUser, registerUser, updateUserProfile } from "../controllers/userController.js";
+import { protect } from "../middleware/auth.js";
+import upload from "../middleware/multer.js";
+
+const userRouter = express.Router();
+
+userRouter.post('/register', registerUser)
+userRouter.post('/login', loginUser)
+userRouter.get('/data', protect, getUserData)
+userRouter.get('/cars', getCars)
+userRouter.post('/update-profile', upload.single('image'), protect, updateUserProfile)
+
+export default userRouter;
