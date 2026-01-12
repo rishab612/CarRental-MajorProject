@@ -125,7 +125,7 @@ const Login = () => {
         {/* CAPTCHA (CENTERED & SMALL) */}
         <div className="flex justify-center scale-90 w-full">
           <ReCAPTCHA
-            sitekey="6LclHEYsAAAAAPXX_PL3OM3dBQrNZ1Pw2eO6g4L6"
+            sitekey="6LepokcsAAAAAD1KT9L05t1asNyGXZTjhT9E6gjp"
             onChange={(token) => setCaptchaToken(token)}
           />
         </div>
